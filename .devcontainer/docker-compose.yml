@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  vsce-base: # devcontainer.jsonのserviceプロパティと対応
+    container_name: vsce-base
+    build: ./base
+    tty: true # Dev Container拡張機能でフォルダを開く際は必須
+    volumes:
+      - ../:/workspace
