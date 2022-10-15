@@ -7,3 +7,4 @@ services:
     tty: true # Dev Container拡張機能でフォルダを開く際は必須
     volumes:
       - ../:/workspace
+      - ./base/.zshrc:/home/node/.zshrc
