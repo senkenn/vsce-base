@@ -1,4 +1,4 @@
-FROM node:17-slim AS root
+FROM node:17-slim AS core
 
 # パッケージインストール
 RUN apt-get update -qq \
@@ -9,9 +9,9 @@ RUN zsh
 ENV SHELL /usr/bin/zsh
 RUN sed -i.bak "s|$HOME:|$HOME:$SHELL|" /etc/passwd
 
-#=======================End of layer: root  =================
+#=======================End of layer: core  =================
 
-FROM root AS home
+FROM core AS home
 
 # ユーザー設定
 ARG USER="node"
