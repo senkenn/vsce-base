@@ -8,3 +8,4 @@ services:
     volumes:
       - ../:/workspace
       - ./base/.zshrc:/home/node/.zshrc
+      - /root/.ssh/id_rsa:/workspace/.ssh/id_rsa

@@ -48,4 +48,12 @@ ENV PATH="/home/${USER}/.npm-global:${PATH}"
 RUN npm install -g npm \
     && npm install -g vsce generator-code yo
 
+RUN mkdir $HOME/.ssh
+RUN echo 'Host github.com' >> $HOME/.ssh/config \
+ && echo '  HostName ssh.github.com' >> $HOME/.ssh/config \
+ && echo '  IdentityFile /workspace/.ssh/id_rsa' >> $HOME/.ssh/config \
+ && echo '  User git' >> $HOME/.ssh/config \
+ && echo '  Port 443' >> $HOME/.ssh/config \
+ && echo '  StrictHostKeyChecking no' >> $HOME/.ssh/config
+
 #=======================End of layer: workspace  =================
