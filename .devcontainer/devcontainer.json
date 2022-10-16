@@ -21,7 +21,9 @@
 			"extensions": [
 				"dbaeumer.vscode-eslint",
 				"ms-azuretools.vscode-docker",
-				"mhutchie.git-graph"
+				"mhutchie.git-graph",
+				"streetsidesoftware.code-spell-checker",
+        "mike-co.import-sorter"
 			]
 		}
 	},

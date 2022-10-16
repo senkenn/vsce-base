@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "gen": "npx yo code"
+  },
   "devDependencies": {
     "generator-code": "^1.7.0",
     "vsce": "^2.11.0",
