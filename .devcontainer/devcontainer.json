@@ -23,7 +23,8 @@
 				"ms-azuretools.vscode-docker",
 				"mhutchie.git-graph",
 				"streetsidesoftware.code-spell-checker",
-        "mike-co.import-sorter"
+        "mike-co.import-sorter",
+				"GitHub.vscode-pull-request-github"
 			]
 		}
 	},
