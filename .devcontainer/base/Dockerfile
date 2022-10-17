@@ -11,7 +11,7 @@ RUN sed -i.bak "s|$HOME:|$HOME:$SHELL|" /etc/passwd
 
 #=======================End of layer: core  =================
 
-FROM core AS home
+FROM core AS user
 
 # ユーザー設定
 ARG USER="node"
@@ -34,20 +34,10 @@ RUN echo "zstyle ':prezto:module:prompt' theme 'powerlevel10k'" >> $HOME/.zprezt
 # p10kの設定ファイルを適用
 COPY ./.p10k.zsh ${HOME}/.p10k.zsh
 
-#=======================End of layer: home  =================
-
-FROM home AS workspace
-
 # ワークスペース設定
 WORKDIR /workspace
 
-ENV NPM_CONFIG_PREFIX=/home/$USER/.npm-global
-ENV PATH="/home/${USER}/.npm-global:${PATH}"
-
-# ライブラリインストール
-RUN npm install -g npm \
-    && npm install -g vsce generator-code yo
-
+# SSH設定
 RUN mkdir $HOME/.ssh
 RUN echo 'Host github.com' >> $HOME/.ssh/config \
  && echo '  HostName ssh.github.com' >> $HOME/.ssh/config \
@@ -56,4 +46,4 @@ RUN echo 'Host github.com' >> $HOME/.ssh/config \
  && echo '  Port 443' >> $HOME/.ssh/config \
  && echo '  StrictHostKeyChecking no' >> $HOME/.ssh/config
 
-#=======================End of layer: workspace  =================
+#=======================End of layer: user  =================
