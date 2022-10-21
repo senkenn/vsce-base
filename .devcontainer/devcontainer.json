@@ -17,11 +17,24 @@
 	"customizations": {
 		// Configure properties specific to VS Code.
 		"vscode": {
+			"settings": {
+				"multiCommand.commands": [
+					{
+						"command": "multiCommand.saveAndExecute",
+						"sequence": [
+							"workbench.action.debug.restart",
+							"cursorDown",
+							"workbench.action.files.save"
+						]
+					}
+				],
+			},
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
 				"dbaeumer.vscode-eslint",
 				"ms-azuretools.vscode-docker",
 				"mhutchie.git-graph",
+        "eamodio.gitlens",
 				"streetsidesoftware.code-spell-checker",
         "mike-co.import-sorter",
 				"GitHub.vscode-pull-request-github",
