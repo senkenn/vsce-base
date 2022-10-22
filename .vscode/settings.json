@@ -38,4 +38,7 @@
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": false,
   "explorer.sortOrder": "default",
+  "cSpell.words": [
+    "isnan",
+  ],
 }
