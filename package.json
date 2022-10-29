@@ -2,16 +2,16 @@
   "name": "vsce-base",
   "private": true,
   "scripts": {
-    "setup": "rimraf ./node_modules ./vscode-*/**/node_modules && yarn",
+    "setup": "yarn && lerna bootstrap",
+    "setup:clean": "rimraf ./node_modules ./vscode-*/**/node_modules && yarn setup",
     "gen": "npx yo code"
   },
-  "workspaces": {
-    "packages": [
-      "vscode-multi-line-uncomment"
-    ]
-  },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "generator-code": "^1.7.0",
+    "lerna": "^6.0.1",
     "rimraf": "^3.0.2",
     "vsce": "^2.11.0",
     "yo": "^4.3.0"
