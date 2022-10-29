@@ -37,6 +37,10 @@ COPY ./.p10k.zsh ${HOME}/.p10k.zsh
 # ワークスペース設定
 WORKDIR /workspace
 
+# ライブラリインストール
+RUN npm install --location=global npm \
+    && npm install --location=global vsce generator-code yo
+
 # SSH設定
 RUN mkdir $HOME/.ssh
 RUN echo 'Host github.com' >> $HOME/.ssh/config \
