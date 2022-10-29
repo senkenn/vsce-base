@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "setup": "yarn && lerna bootstrap",
-    "setup:clean": "rimraf ./node_modules ./vscode-*/**/node_modules && yarn setup",
+    "setup:clean": "rimraf ./node_modules ./packages/**/node_modules && yarn setup",
     "gen": "npx yo code"
   },
   "workspaces": [
