@@ -15,7 +15,6 @@ FROM core AS user
 
 # ユーザー設定
 ARG USER="node"
-USER $USER
 
 # ホームディレクトリ設定
 ARG HOME="/home/${USER}"
@@ -40,6 +39,9 @@ WORKDIR /workspace
 # ライブラリインストール
 RUN npm install --location=global npm \
     && npm install --location=global vsce generator-code yo
+
+# npm global install時の権限の関係でここでrootから一般ユーザーに切り替える
+USER $USER
 
 # SSH設定
 RUN mkdir $HOME/.ssh
