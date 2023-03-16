@@ -11,7 +11,10 @@
         "mhutchie.git-graph",
         "eamodio.gitlens",
         "streetsidesoftware.code-spell-checker",
-        "fabiospampinato.vscode-todo-plus"
+        "fabiospampinato.vscode-todo-plus",
+        "dbaeumer.vscode-eslint",
+        "mike-co.import-sorter",
+        "TabNine.tabnine-vscode"
       ]
     }
   }
