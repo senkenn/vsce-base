@@ -1,10 +1,10 @@
 #!/bin/bash
 
+HOME=/home/$USER
+
 # カレントディレクトリの uid と gid を調べる
 uid=$(stat -c "%u" ${WORKDIR})
 gid=$(stat -c "%g" ${WORKDIR})
-echo $uid $gid
-pwd
 
 if [ "$uid" -ne 0 ]; then
     if [ "$(id -u $USER)" -ne $uid ]; then
@@ -26,4 +26,4 @@ fi
 
 # このスクリプト自体は root で実行されているので、uid/gid 調整済みの builder ユーザー
 # として指定されたコマンドを実行する。
-exec setpriv --reuid=$USER --regid=$USER --init-groups "node"
+exec setpriv --reuid=$USER --regid=$USER --init-groups "$@"

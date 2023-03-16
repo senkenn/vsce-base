@@ -5,6 +5,7 @@ services:
       context: .devcontainer
       args:
         - USER=node
+        - WORKDIR=/workspace
     tty: true
     volumes:
       - ./:/workspace

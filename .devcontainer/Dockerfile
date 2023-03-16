@@ -18,8 +18,11 @@ RUN npm install -g npm && \
 # Volta
 RUN curl https://get.volta.sh | bash
 
-USER root
+ARG WORKDIR
 WORKDIR $WORKDIR
 
+# Excute entrypoint script with root user.
+USER root
 COPY ./entrypoint.sh /
 ENTRYPOINT [ "/entrypoint.sh" ]
+CMD [ "node" ]
