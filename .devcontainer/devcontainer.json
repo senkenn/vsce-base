@@ -1,0 +1,18 @@
+{
+  "name": "${localWorkspaceFolderBasename}",
+  "service": "app",
+  "dockerComposeFile": "../compose.yaml",
+  "workspaceFolder": "/workspace",
+  // "remoteUser": "node",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-docker",
+        "mhutchie.git-graph",
+        "eamodio.gitlens",
+        "streetsidesoftware.code-spell-checker",
+        "fabiospampinato.vscode-todo-plus"
+      ]
+    }
+  }
+}

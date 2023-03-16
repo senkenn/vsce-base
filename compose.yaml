@@ -1,0 +1,13 @@
+services:
+  app:
+    container_name: vsce-base
+    build:
+      context: .devcontainer
+      args:
+        - USER=node
+    tty: true
+    volumes:
+      - ./:/workspace
+    environment:
+      - USER=node
+      - WORKDIR=/workspace
