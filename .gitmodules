@@ -1,0 +1,6 @@
+[submodule "vscode-multi-line-uncomment"]
+	path = vscode-multi-line-uncomment
+	url = git@github.com:senkenn/vscode-multi-line-uncomment.git
+[submodule "vsce-format-test-each"]
+	path = vsce-format-test-each
+	url = git@github.com:senkenn/vsce-format-test-each.git
