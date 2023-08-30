@@ -7,14 +7,23 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        // common in any project
         "ms-azuretools.vscode-docker",
         "mhutchie.git-graph",
         "eamodio.gitlens",
         "streetsidesoftware.code-spell-checker",
         "fabiospampinato.vscode-todo-plus",
+        "DavidAnson.vscode-markdownlint",
+        "GitHub.vscode-pull-request-github",
+
+        // coding assistants
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+
+        // JS/TS project
         "dbaeumer.vscode-eslint",
-        "mike-co.import-sorter",
-        "TabNine.tabnine-vscode"
+        "esbenp.prettier-vscode",
+        "chamboug.js-auto-backticks",
       ]
     }
   }

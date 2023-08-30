@@ -1,7 +1,8 @@
 FROM node:18-slim
 
 # Change the package server to a mirroring server in Japan
-RUN sed -i.bak -e "s%http://archive.ubuntu.com/ubuntu/%http://ftp.iij.ad.jp/pub/linux/ubuntu/archive/%g" /etc/apt/sources.list
+# NOTE: Thils line is not working, by this error -> "sed: can't read /etc/apt/sources.list: No such file or directory"
+# RUN sed -i.bak -e "s%http://archive.ubuntu.com/ubuntu/%http://ftp.iij.ad.jp/pub/linux/ubuntu/archive/%g" /etc/apt/sources.list
 
 # install packages
 RUN apt-get update -qq &&\
