@@ -4,3 +4,6 @@
 [submodule "vsce-format-test-each"]
 	path = vsce-format-test-each
 	url = git@github.com:senkenn/vsce-format-test-each.git
+[submodule "ts-type-expand"]
+	path = ts-type-expand
+	url = git@github.com:d-kimuson/ts-type-expand.git
