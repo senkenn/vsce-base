@@ -5,5 +5,5 @@
 Generate project
 
 ```sh
-yo code
+pnpm yo code
 ```
